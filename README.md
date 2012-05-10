@@ -20,12 +20,15 @@ http://github.com/alessani/bootstrap-colorpicker-rails
 Rails > 3.1
 Include bootstrap-colorpicker-rails in Gemfile;
 
-    gem 'bootstrap-colorpicker-rails'
-    
+    group :assets do
+      gem 'bootstrap-colorpicker-rails'
+    end
 or you can install from latest build;
 
-    gem 'bootstrap-colorpicker-rails', :require => 'bootstrap-colorpicker-rails',
+    group :assets do
+      gem 'bootstrap-colorpicker-rails', :require => 'bootstrap-colorpicker-rails',
                               :git => 'git://github.com/alessani/bootstrap-colorpicker-rails.git'
+    end
 and run bundle install.
 
 Stylesheets
