@@ -1,7 +1,7 @@
 bootstrap-colorpicker-rails
 ===========================
 
-A Colorpicker for Twitter Bootstrap, integrated with Rails assets pipeline
+A Colorpicker for Twitter Bootstrap (29/9/2012), integrated with Rails assets pipeline
 
 Bootstrap colorpicker for Rails
 Bootstrap is a toolkit from Twitter designed to kickstart development of webapps and sites. It includes base CSS and HTML for typography, forms, buttons, tables, grids, navigation, and more.
