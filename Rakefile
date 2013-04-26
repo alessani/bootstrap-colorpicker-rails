@@ -6,8 +6,8 @@ require 'less'
 
 desc "Update the CSS"
 task "css" do
-  less = File.read(File.expand_path('../bootstrap-colorpicker/less/bootstrap-colorpicker.less', __FILE__))
-  parser = Less::Parser.new paths: ['./bootstrap/less'], filename: 'bootstrap-colorpicker.less'
+  less = File.read(File.expand_path('../less/bootstrap-colorpicker-rails.less', __FILE__))
+  parser = Less::Parser.new paths: ['./bootstrap-colorpicker/less', './bootstrap/less']
   tree = parser.parse(less)
   File.open(File.expand_path('../vendor/assets/stylesheets/bootstrap-colorpicker.css', __FILE__), 'w') do |fd|
     fd.write tree.to_css

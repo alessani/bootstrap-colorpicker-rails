@@ -1,0 +1,28 @@
+@import "variables";
+
+.border-radius(@radius) {
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+          border-radius: @radius;
+}
+
+.clearfix {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    // Fixes Opera/contenteditable bug:
+    // http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@import "bootstrap-colorpicker";
+
+@colorPickerSaturationImage: '/assets/bootstrap-colorpicker/saturation.png';
+@colorPickerHueImage:        '/assets/bootstrap-colorpicker/hue.png';
+@colorPickerAlphaImage:      '/assets/bootstrap-colorpicker/alpha.png';
