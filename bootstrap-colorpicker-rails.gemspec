@@ -10,10 +10,12 @@ Gem::Specification.new do |gem|
 
   gem.name          = "bootstrap-colorpicker-rails"
   gem.require_paths = ["lib"]
-  gem.files         = `git ls-files`.split("\n")
+  gem.files         = `git ls-files -- {Gemfile,README.md,Rakefile,less,lib,vendor,*.gemspec}`.split("\n")
   gem.version       = BootstrapColorpickerRails::Rails::VERSION
 
   gem.add_dependency "railties", ">= 3.0"
   gem.add_development_dependency "bundler", ">= 1.0"
   gem.add_development_dependency "rake"
+  gem.add_development_dependency "less"
+  gem.add_development_dependency "therubyracer"
 end
