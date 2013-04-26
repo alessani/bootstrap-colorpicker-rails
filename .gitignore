@@ -1,0 +1,14 @@
+*.gem
+*.rbc
+.bundle
+.config
+.yardoc
+Gemfile.lock
+InstalledFiles
+_yardoc
+lib/bundler/man
+pkg
+tmp
+.DS_Store
+*.swp
+*.rdb
