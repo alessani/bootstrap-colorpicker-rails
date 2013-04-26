@@ -1,0 +1,3 @@
+[submodule "bootstrap-colorpicker"]
+	path = bootstrap-colorpicker
+	url = git://github.com/xaguilars/bootstrap-colorpicker.git
