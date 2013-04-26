@@ -47,3 +47,18 @@ Just call colorpicker() with any selector.
     $('.colorpicker').colorpicker()
 
 There are some options you can pass to colorpicker(). They are documented at http://www.eyecon.ro/bootstrap-colorpicker/
+
+## Development
+
+To setup your dev. environment:
+
+1. Clone this repo
+1. `bundle` - Install required libraries for generating the CSS
+1. `git submodule init`
+1. `git submodule update` - sets up the bootstrap and bootstrap-colorpicker
+   submodules which are used to build the CSS
+
+To update from the upstream version of bootstrap-colorpicker:
+
+1. `git submodule foreach git pull`
+1. `bundle exec rake css`
