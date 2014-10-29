@@ -1,5 +1,4 @@
-bootstrap-colorpicker-rails
-===========================
+# Bootstrap colorpicker for Rails
 
 A Colorpicker for Twitter Bootstrap, integrated with Rails assets pipeline
 
@@ -16,34 +15,61 @@ bootstrap-colorpicker-rails project integrates colorpicker with Rails 3 assets p
 
 http://github.com/alessani/bootstrap-colorpicker-rails
 
+## Rails > 3.1
 
-Rails > 3.1
 Include bootstrap-colorpicker-rails in Gemfile;
 
-    group :assets do
-      gem 'bootstrap-colorpicker-rails'
-    end
+```ruby
+gem 'bootstrap-colorpicker-rails'
+```
+
 or you can install from latest build;
 
-    group :assets do
-      gem 'bootstrap-colorpicker-rails', :require => 'bootstrap-colorpicker-rails',
-                              :git => 'git://github.com/alessani/bootstrap-colorpicker-rails.git'
-    end
-and run bundle install.
+```ruby
+gem 'bootstrap-colorpicker-rails', :require => 'bootstrap-colorpicker-rails',
+            :git => 'git://github.com/alessani/bootstrap-colorpicker-rails.git'
+```
 
-Stylesheets
+and run `bundle install`.
+
+This gem doesn't include Bootstrap. You can get Bootstrap here: https://github.com/twbs/bootstrap-sass
+
+## Configuration
+
+### Stylesheets
+
 Add necessary stylesheet file to app/assets/stylesheets/application.css
 
     *= require bootstrap-colorpicker
-    
-Javascripts
+
+### Javascripts
+
 Add necessary javascript(s) files to app/assets/javascripts/application.js
 
     //= require bootstrap-colorpicker
-    
-Using bootstrap-colorpicker-rails
+
+## Using bootstrap-colorpicker-rails directly
+
 Just call colorpicker() with any selector.
 
-    $('.colorpicker').colorpicker()
+```html
+<input class='colorpicker'>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+
+    $('.colorpicker').colorpicker();
+
+  })
+</script>
+```
+
+## Using bootstrap-colorpicker-rails with simple_form
+
+There is `simple_form` input which you can apply via `as: :colorpicker` option.
+
+```erb
+<%= f.input :color, as: :colorpicker %>
+```
 
 There are some options you can pass to colorpicker(). They are documented at http://www.eyecon.ro/bootstrap-colorpicker/
