@@ -64,6 +64,8 @@ Just call colorpicker() with any selector.
 </script>
 ```
 
+There are some options you can pass to colorpicker(). They are documented at http://www.eyecon.ro/bootstrap-colorpicker/
+
 ## Using bootstrap-colorpicker-rails with simple_form
 
 There is `simple_form` input which you can apply via `as: :colorpicker` option.
@@ -71,5 +73,3 @@ There is `simple_form` input which you can apply via `as: :colorpicker` option.
 ```erb
 <%= f.input :color, as: :colorpicker %>
 ```
-
-There are some options you can pass to colorpicker(). They are documented at http://www.eyecon.ro/bootstrap-colorpicker/
