@@ -1,6 +1,8 @@
 require "rails"
 require "bootstrap-colorpicker-rails/version"
 
+autoload :ColorpickerInput, 'bootstrap-colorpicker-rails/simple_form/colorpicker_input'
+
 module BootstrapColorpickerRails
   module Rails
     if ::Rails.version < "3.1"
