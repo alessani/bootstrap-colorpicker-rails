@@ -7,9 +7,15 @@ Bootstrap is a toolkit from Twitter designed to kickstart development of webapps
 
 http://twitter.github.com/bootstrap/
 
-Bootstrap colorpicker is a plugin for Bootstrap designed by Stefan Petre. It provides a stylish color picker for Bootstrap.
+Bootstrap colorpicker plugin for the Twitter Bootstrap toolkit. Originally written by Stefan Petre ((@eyecon)[http://twitter.com/stefanpetre/]) and maintained in Github by Javier Aguilar((@mjolnic)[http://twitter.com/mjolnic/]) and the community.
 
-http://www.eyecon.ro/bootstrap-colorpicker/
+It basically adds a color picker to a field or any other element.
+
+* can be used as a component
+* alpha picker
+* multiple formats: hex, rgb, rgba, hsl, hsla
+
+http://mjolnic.github.io/bootstrap-colorpicker/
 
 bootstrap-colorpicker-rails project integrates colorpicker with Rails 3 assets pipeline.
 
@@ -40,13 +46,17 @@ This gem doesn't include Bootstrap. You can get Bootstrap here: https://github.c
 
 Add necessary stylesheet file to app/assets/stylesheets/application.css
 
-    *= require bootstrap-colorpicker
+```css
+*= require bootstrap-colorpicker
+```
 
 ### Javascripts
 
 Add necessary javascript(s) files to app/assets/javascripts/application.js
 
-    //= require bootstrap-colorpicker
+```javascript
+//= require bootstrap-colorpicker
+```
 
 ## Using bootstrap-colorpicker-rails directly
 
@@ -64,7 +74,7 @@ Just call colorpicker() with any selector.
 </script>
 ```
 
-There are some options you can pass to colorpicker(). They are documented at http://www.eyecon.ro/bootstrap-colorpicker/
+There are some options you can pass to colorpicker(). They are documented at http://mjolnic.github.io/bootstrap-colorpicker/
 
 ## Using bootstrap-colorpicker-rails with simple_form
 
