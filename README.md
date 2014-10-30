@@ -6,7 +6,7 @@ Bootstrap is a toolkit from Twitter designed to kickstart development of webapps
 
 http://twitter.github.com/bootstrap/
 
-Bootstrap colorpicker plugin for the Twitter Bootstrap toolkit. Originally written by Stefan Petre ((@eyecon)[http://twitter.com/stefanpetre/]) and maintained in Github by Javier Aguilar((@mjolnic)[http://twitter.com/mjolnic/]) and the community.
+Bootstrap colorpicker plugin for the Twitter Bootstrap toolkit. Originally written by Stefan Petre ([@eyecon](http://twitter.com/stefanpetre/)) and maintained in Github by Javier Aguilar ([@mjolnic](http://twitter.com/mjolnic/)) and the community.
 
 It basically adds a color picker to a field or any other element.
 
