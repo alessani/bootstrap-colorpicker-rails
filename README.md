@@ -8,7 +8,7 @@ Bootstrap is a toolkit from Twitter designed to kickstart development of webapps
 
 http://twitter.github.com/bootstrap/
 
-Bootstrap colorpicker is a plugin for Bootstrap designed by Stefan Petre. It provides a stylish date picker for Bootstrap.
+Bootstrap colorpicker is a plugin for Bootstrap designed by Stefan Petre. It provides a stylish color picker for Bootstrap.
 
 http://www.eyecon.ro/bootstrap-colorpicker/
 
