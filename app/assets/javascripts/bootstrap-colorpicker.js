@@ -600,14 +600,17 @@
         '</div>',
       align: 'right',
       customClass: null,
-      colorSelectors: null
+      colorSelectors: null,
+      innerHtmlElement: null
     };
 
     var Colorpicker = function(element, options) {
       this.element = $(element).addClass('colorpicker-element');
       this.options = $.extend(true, {}, defaults, this.element.data(), options);
       this.component = this.options.component;
+      this.innerHtmlElement: this.options.innerHtmlElement;
       this.component = (this.component !== false) ? this.element.find(this.component) : false;
+      this.innerHtmlElement = (this.innerHtmlElement !== null) ? this.element.find(this.innerHtmlElement) : false;
       if (this.component && (this.component.length === 0)) {
         this.component = false;
       }
@@ -620,6 +623,12 @@
       if (this.input && (this.input.length === 0)) {
         this.input = false;
       }
+
+      this.innerHtmlElement = this.options.input ? this.element.find(this.options.innerHtmlElement) : false;
+      if (this.innerHtmlElement && (this.innerHtmlElement.length === 0)) {
+        this.innerHtmlElement = false;
+      }
+
       // Set HSB color
       this.color = new Color(this.options.color !== false ? this.options.color : this.getValue(), this.options.colorSelectors);
       this.format = this.options.format !== false ? this.options.format : this.color.origFormat;
@@ -627,6 +636,7 @@
       if (this.options.color !== false) {
         this.updateInput(this.color);
         this.updateData(this.color);
+        this.updateInnerHtml(this.color);
       }
 
       // Setup picker
@@ -785,6 +795,18 @@
         this.element.data('color', val);
         return val;
       },
+      updateInnerHtml: function(val) {
+        val = val || this.color.toString(this.format);
+        if (this.innerHtmlElement !== false) {
+          var color = new Color(val, this.options.colorSelectors);
+            var alias = color.toAlias();
+            if (typeof this.options.colorSelectors[alias] !== 'undefined') {
+              val = alias;
+            }
+          }
+          this.innerHtmlElement.html(val);
+        }
+      }
       updateInput: function(val) {
         val = val || this.color.toString(this.format);
         if (this.input !== false) {
@@ -849,6 +871,7 @@
           val = this.updateComponent();
           this.updateInput(val);
           this.updateData(val);
+          this.updateInnerHtml(val);
           this.updatePicker(); // only update picker if value is not empty
         }
         return val;
