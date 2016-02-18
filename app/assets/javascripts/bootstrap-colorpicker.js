@@ -608,7 +608,6 @@
       this.element = $(element).addClass('colorpicker-element');
       this.options = $.extend(true, {}, defaults, this.element.data(), options);
       this.component = this.options.component;
-      this.innerHtmlElement: this.options.innerHtmlElement;
       this.component = (this.component !== false) ? this.element.find(this.component) : false;
       this.innerHtmlElement = (this.innerHtmlElement !== null) ? this.element.find(this.innerHtmlElement) : false;
       if (this.component && (this.component.length === 0)) {
@@ -798,7 +797,8 @@
       updateInnerHtml: function(val) {
         val = val || this.color.toString(this.format);
         if (this.innerHtmlElement !== false) {
-          var color = new Color(val, this.options.colorSelectors);
+          if (this.options.colorSelectors) {
+            var color = new Color(val, this.options.colorSelectors);
             var alias = color.toAlias();
             if (typeof this.options.colorSelectors[alias] !== 'undefined') {
               val = alias;
@@ -806,7 +806,8 @@
           }
           this.innerHtmlElement.html(val);
         }
-      }
+        return val;
+      },
       updateInput: function(val) {
         val = val || this.color.toString(this.format);
         if (this.input !== false) {
